@@ -34,6 +34,10 @@ public class ATM {
 	{
 		if (!accounts.containsKey(idNum))
 			return false;
+		if (deposit<0)
+		{
+			return false;
+		}
 		accounts.put(idNum, accounts.get(idNum)+deposit);
 		return true;
 	}
