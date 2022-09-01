@@ -27,7 +27,7 @@ public class ATM {
 	public double checkBalance(int idNum)
 	{
 		if (accounts.containsKey(idNum))
-			return accounts.get(idNum);
+			return Math.round(accounts.get(idNum)*100.0)/100.0;
 		return 0.0;
 	}
 	public boolean depositMoney (int idNum, double deposit)
@@ -42,6 +42,8 @@ public class ATM {
 		if (!accounts.containsKey(idNum))
 			return false;
 		if (accounts.get(idNum)-withdraw<0)
+			return false;
+		if (withdraw<0)
 			return false;
 		accounts.put(idNum, accounts.get(idNum)-withdraw);
 		return true;

@@ -3,7 +3,7 @@ public class ATMtester {
 	public class ATMTester {
 		public static void main(String[] args) {
 		ATM chase = new ATM();
-		System.out.println("hello"); // Should be 634.1 and	not a fraction more!
+	
 		// Open accounts
 		chase.openAccount(00001);
 		chase.openAccount(00002, 2500.0);
@@ -39,8 +39,7 @@ public class ATMtester {
 		// Test other issues
 		chase.withdrawMoney(00002, 2020.2);
 		System.out.println(chase.checkBalance(00002)); // Should be 634.1 and	not a fraction more!
-		System.out.println("hello"); // Should be 634.1 and	not a fraction more!
-
+		
 		}
 		}
 }
