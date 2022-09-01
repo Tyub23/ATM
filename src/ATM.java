@@ -2,11 +2,11 @@ import java.util.*;
 
 
 public class ATM {
-	private HashMap<Integer, Double> accounts=new HashMap<Integer, Double>();
+	private HashMap<Integer, Double> accounts;
 	
 	public ATM ()
 	{
-		
+		accounts = new HashMap<Integer, Double>();
 	}
 	public void openAccount (int idNum)
 	{
